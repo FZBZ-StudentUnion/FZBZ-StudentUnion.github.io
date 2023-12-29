@@ -1,0 +1,5 @@
+/node_modules
+/public/images/photo/*
+/public/images/webphoto/*
+/public/videos/logos/*
+/public/videos/videos/*

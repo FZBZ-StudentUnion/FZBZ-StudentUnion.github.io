@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Photo Uploader</title>
+
+  <link rel="stylesheet" href="/stylesheets/photo.css">
+</head>
+<body>
+  <div id="header">
+    <h1 id="listTitle"><%= title %></h1>
+  </div>
+  <!-- 文件下载链接 -->
+  
+  <div id="scrollDiv">
+  <div id="container">
+    <div id="logo"><img src="<%= url %>" alt="logo"></div>
+    <div id="nav">
+      <div class="fixedNav">
+        <div class="listNav">
+          <div class="listBtn clickBtn"><span>照片列表</span></div>
+          <div class="listBtn"><span>视频列表</span></div>
+          <div class="listBtn"><span>现场直播</span></div>
+        </div>
+      </div>
+    </div>
+    <div id="listContainer">
+      <div id="photoList" class="listItem">
+        <!-- 照片列表将在这里动态生成 -->
+      </div>
+      <div id="videoList" class="listItem hiddenList">
+        <!-- 视频列表将在这里动态生成 -->
+      </div>
+      <div id="livePage" class="listItem hiddenList">
+        
+      </div>
+    </div>
+  </div>
+  </div>
+  <script src="/javascripts/photo.js"></script>
+</body>
+</html>

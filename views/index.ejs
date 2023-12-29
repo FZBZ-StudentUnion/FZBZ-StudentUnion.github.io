@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PhotoWall index</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css"
+    />
+    <link rel="stylesheet" href="/stylesheets/index.css" />
+  </head>
+  <body>
+    <div id="header">
+        <a href="#" class="nav__logo">福州八中图片墙</a>
+
+        <div class="nav__actions">
+          <!-- Search button -->
+          <i class="ri-search-line nav__search" id="search-btn"></i>
+
+          <!-- Login button -->
+          <i class="ri-user-line nav__login <%= (isLogin)? 'btn__hidden': '' %>" id="login-btn"></i>
+
+          <i class="nav__logout <%= (!isLogin)? 'btn__hidden': '' %>" id="logout-btn">logout</i>
+        </div>
+    </div>
+    <!--==================== SEARCH ====================-->
+    <div class="search" id="search">
+      <form action="" class="search__form">
+        <i class="ri-search-line search__icon"></i>
+        <input
+          type="search"
+          placeholder="What are you looking for?"
+          class="search__input"
+        />
+      </form>
+
+      <i class="ri-close-line search__close" id="search-close"></i>
+    </div>
+
+    <!--==================== LOGIN ====================-->
+    <div class="login" id="login">
+      <form action="" class="login__form">
+        <h2 class="login__title">Log In</h2>
+
+        <div class="login__group">
+          <div>
+            <label for="tel" class="login__label">Tel</label>
+            <input
+              type="tel"
+              name="tel"
+              placeholder="Write your telephone number"
+              class="login__input tel"
+            />
+          </div>
+
+          <div>
+            <label for="password" class="login__label">Password</label>
+            <input
+              type="password"
+              name="password"
+              placeholder="Enter your password"
+              class="login__input password"
+            />
+          </div>
+        </div>
+
+        <div>
+          <p class="login__signup">
+            You do not have an account? <a href="#">Sign up</a>
+          </p>
+
+          <a href="#" class="login__forgot"> You forgot your password </a>
+
+          <button type="submit" class="login__button">Log In</button>
+        </div>
+      </form>
+
+      <i class="ri-close-line login__close" id="login-close"></i>
+    </div>
+    <!--==================== REG ====================-->
+    
+    <div class="reg" id="reg">
+      <form action="" class="reg__form">
+        <h2 class="reg__title">Sign Up</h2>
+
+        <div class="reg__group">
+          <div>
+            <label for="tel" class="reg__label">Tel</label>
+            <input
+              type="tel"
+              name="tel"
+              placeholder="Write your telephone number"
+              class="reg__input tel"
+            />
+          </div>
+
+          <div>
+            <label for="password" class="reg__label">Password</label>
+            <input
+              type="password"
+              name="password"
+              placeholder="Enter your password"
+              class="reg__input password"
+            />
+          </div>
+        </div>
+
+        <div>
+          <button type="submit" class="reg__button">Log In</button>
+        </div>
+      </form>
+
+      <i class="ri-close-line reg__close" id="reg-close"></i>
+    </div>
+    <!-- 文件下载链接 -->
+
+    <div id="scrollDiv">
+      <div id="container">
+        <div id="wallList">
+          <!-- 照片列表将在这里动态生成 -->
+          <!--
+          <div class="wallItem">
+            <a href="">
+              <div>
+                <img src="" alt="" class="photo" />
+              </div>
+              <h3></h3>
+            </a>
+          </div>
+          -->
+        </div>
+      </div>
+    </div>
+
+    <script src="/javascripts/index.js"></script>
+  </body>
+</html>
