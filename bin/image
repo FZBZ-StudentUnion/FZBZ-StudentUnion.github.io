@@ -5,6 +5,7 @@
  */
 
  var app = require('../image_server');
+ var debug = require('debug')('image:server');
  var http = require('http');
  
  /**

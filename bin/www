@@ -4,12 +4,6 @@
  * Module dependencies.
  */
 
-const mongoose = require('mongoose');
-const {DBHOST, DBPORT, DBNAME} = require('../config/config');
-
-mongoose.connect(`mongodb://${DBHOST}:${DBPORT}/${DBNAME}`)
-.then((data)=>{
-
 var app = require('../app');
 var debug = require('debug')('photoweb:server');
 var http = require('http');
@@ -94,9 +88,3 @@ function onListening() {
     : 'port ' + addr.port;
   debug('Listening on ' + bind);
 }
-
-})
-.catch((reason)=>{
-  console.log('connect fail');
-  throw reason;
-})
